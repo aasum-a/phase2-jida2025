@@ -52,6 +52,10 @@ export default function Page() {
         {/* CSS Module */}
         <div className={styles.shape} />
       </div>
+      <footer className="mt-8 text-center text-xs text-gray-400">
+        © JIDA {new Date().getFullYear()} Andy Muhammad Sandika. All rights
+        reserved.
+      </footer>
     </main>
   );
 }
