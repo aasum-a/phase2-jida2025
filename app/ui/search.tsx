@@ -11,9 +11,8 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
   // use debounce for reduce the number of requests sent to your database, thus saving resources (membiarkan user mengetik sampai ketentuan yang kita tetapkan misalnya 300ms)
   const handleSearch = useDebouncedCallback((term) => {
-    console.log(`Searching... ${term}`);
-
     const params = new URLSearchParams(searchParams);
+    params.set("page", "1");
     if (term) {
       params.set("query", term);
     } else {
